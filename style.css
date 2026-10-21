@@ -1,0 +1,318 @@
+/* Reset e estilo geral */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #E5E7EB;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Imagem de fundo com pessoas treinando */
+.fundo-imagem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+  background-size: cover;
+  z-index: -2;
+}
+
+.sobreposicao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.92) 0%, rgba(31, 41, 55, 0.85) 100%);
+  z-index: -1;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(90deg, #111827 0%, #1F2937 100%);
+  border-bottom: 2px solid #F59E0B;
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cabecalho-conteudo h1 {
+  font-family: 'Georgia', serif;
+  font-size: 34px;
+  color: #F9FAFB;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.cabecalho-conteudo p {
+  font-size: 18px;
+  color: #9CA3AF;
+  font-style: italic;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* Cartão principal */
+.cartao-principal {
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 24px;
+  padding: 50px 35px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  margin-bottom: 60px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.cartao-principal:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(245, 158, 11, 0.2);
+}
+
+.icone {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  font-size: 45px;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  border-radius: 50%;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+.cartao-principal h2 {
+  font-family: 'Georgia', serif;
+  font-size: 26px;
+  color: #FBBF24;
+  margin-bottom: 18px;
+}
+
+.cartao-principal p {
+  color: #D1D5DB;
+  font-size: 18px;
+  margin-bottom: 35px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botao-assistente {
+  display: inline-block;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #111827;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+  padding: 18px 45px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+.botao-assistente:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.6);
+}
+
+/* Seção de Planos */
+.titulo-secao {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-size: 30px;
+  color: #FBBF24;
+  margin-bottom: 10px;
+}
+
+.subtitulo-secao {
+  text-align: center;
+  color: #9CA3AF;
+  margin-bottom: 45px;
+  font-size: 17px;
+}
+
+.grade-planos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.plano {
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(75, 85, 99, 0.5);
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+
+.plano:hover {
+  transform: translateY(-10px);
+  border-color: #F59E0B;
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.15);
+}
+
+.plano.destaque {
+  border: 2px solid #F59E0B;
+  transform: scale(1.04);
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+.selo-melhor {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #F59E0B, #D97706);
+  color: #111827;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 25px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.plano h3 {
+  font-size: 23px;
+  color: #F9FAFB;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.preco {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #FBBF24;
+  margin-bottom: 28px;
+}
+
+.preco span {
+  font-size: 16px;
+  color: #6B7280;
+  font-weight: normal;
+}
+
+.plano ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.plano li {
+  padding: 12px 0;
+  border-bottom: 1px solid #374151;
+  color: #D1D5DB;
+}
+
+.plano li:last-child {
+  border-bottom: none;
+}
+
+.botao-plano {
+  display: block;
+  text-align: center;
+  background: transparent;
+  color: #F59E0B;
+  border: 2px solid #F59E0B;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.botao-plano:hover {
+  background: #F59E0B;
+  color: #111827;
+}
+
+.botao-plano.destaque {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #111827;
+  border: none;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.botao-plano.destaque:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+/* Seção de informações */
+.informacoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.bloco-info {
+  background: rgba(17, 24, 39, 0.85);
+  border-radius: 16px;
+  padding: 30px 25px;
+  border: 1px solid rgba(75, 85, 99, 0.5);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.bloco-info:hover {
+  transform: translateY(-5px);
+  border-color: #4B5563;
+}
+
+.bloco-info h3 {
+  color: #FBBF24;
+  font-size: 20px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #374151;
+}
+
+.bloco-info ul {
+  list-style: none;
+}
+
+.bloco-info li {
+  padding: 10px 0;
+  color: #D1D5DB;
+  border-bottom: 1px solid #1F2937;
+}
+
+.bloco-info li:last-child {
+  border-bottom: none;
+}
+
+/* Rodapé */
+footer {
+  background: #111827;
+  border-top: 2px solid #374151;
+  color: #9CA3AF;
+  text-align: center;
+  padding: 25px;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cabecalho-conteudo h1 { font-size: 26px; }
+  .cartao-principal { padding: 35px 22px; }
+  .plano.destaque { transform: scale(1); }
+  .titulo-secao { font-size: 24px; }
+  .fundo-imagem { background-position: center; }
+}
